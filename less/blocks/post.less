@@ -1,0 +1,86 @@
+@import "../variables.less";
+
+.post {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+	width: 94%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	&>a {
+		color: black;
+		text-decoration: none;
+	}
+
+	@media @tablet-widths {
+		width: 47%;
+	}
+	@media @desktop-widths {
+		width: 23%;
+		margin: 15px 1%;
+	}
+}
+
+.post__flex-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+	align-content: flex-start;
+
+}
+
+.post__main-img {
+	position: relative;
+	width: 100%;
+	display: block;
+	font-size: 0;
+	img {
+		width: 100%;
+	}
+	&::after {
+		position: absolute;
+		bottom: -2px;
+		left: 9%;
+		content: "";
+		width: 0.1px;
+		height: 0.1px;
+		border: 10px solid transparent;
+		border-bottom: 10px solid white; 
+	}
+}
+
+.post__content {
+	width: 100%;
+	padding: 10px 10px 20px 10px;
+	box-sizing: border-box;
+}
+
+.post__date {
+	font-size: 0.8em;
+	color: @color-dgray;
+	position: relative;
+	padding-left: 22px;
+	&::before {
+		content: "";
+		position: absolute;
+		top: -1px;
+		left: 0px;
+		width: 17px;
+		height: 17px;
+		background-image: url(../img/icons/calendar-svg.svg);
+		background-size: 100%;
+	}
+}
+
+.post__title {
+	font-size: 1.5em;
+	margin: 10px 0;
+}
+
+.post__preview {
+	margin: 0px;
+	font-size: 0.8em;
+}

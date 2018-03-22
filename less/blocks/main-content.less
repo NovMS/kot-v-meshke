@@ -1,0 +1,43 @@
+@import "../variables.less";
+
+.main-content {
+	width: 100%;
+	min-width: 320px;
+	background-color: white;
+	padding-top: 5px;
+	transition: transform 0.3s;
+	padding-bottom: 0px;
+
+	@media @desktop-widths {
+	}
+}
+
+.main-content_open-menu {
+	transform: translateX(320px);
+	transition: transform 0.3s;
+}
+
+.main-content__posts {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
+	@media @desktop-widths {
+		justify-content: flex-start;
+	}
+}
+
+.main-content__show-more {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: black;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: @color-gray;
+}
