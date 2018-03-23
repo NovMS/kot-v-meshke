@@ -13,6 +13,20 @@
 		text-decoration: none;
 	}
 
+	&>a:hover h1,
+	& img:hover h1{
+		color: @color-dgray;
+	}
+
+	&>a:hover .post__main-img,
+	& .post__main-img:hover
+	{
+		&::before {
+			opacity: 0.3;
+			transition: 0.3s;
+		}
+	}
+
 	@media @tablet-widths {
 		width: 47%;
 	}
@@ -20,6 +34,10 @@
 		width: 23%;
 		margin: 15px 1%;
 	}
+}
+
+.post_first {
+	order: -10;
 }
 
 .post__flex-container {
@@ -49,6 +67,15 @@
 		height: 0.1px;
 		border: 10px solid transparent;
 		border-bottom: 10px solid white; 
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: @color-dgray;
+		opacity: 0;
+		transition: 0.3s;
 	}
 }
 
@@ -83,4 +110,10 @@
 .post__preview {
 	margin: 0px;
 	font-size: 0.8em;
+}
+
+.post_after-news {
+	@media @desktop-widths {
+	margin-left: 26%;
+	}
 }
