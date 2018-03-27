@@ -1,1 +1,1 @@
-# kot-v-meshke
+# kot-v-meshke v1.0
